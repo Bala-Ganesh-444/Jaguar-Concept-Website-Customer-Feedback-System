@@ -306,7 +306,7 @@ echo 'index.html'
 
 ## 🎗 License
 
-This project is protected under the [MIT License](https://choosealicense.com/licenses/mit/) License. For more details, refer to the [LICENSE]((https://choosealicense.com/licenses/mit/)) file.
+This project is protected under the [MIT License](https://choosealicense.com/licenses/mit/) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/mit/) file.
 
 ---
 
