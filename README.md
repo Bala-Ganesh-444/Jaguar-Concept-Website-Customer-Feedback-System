@@ -257,14 +257,7 @@ Run Jaguar-Concept-Website-Customer-Feedback-System.git using the following comm
 
 ### 🧪 Testing
 Run the test suite using the following command:
-echo 'INSERT-TEST-COMMAND-HERE'
-
----
-## 📌 Project Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+echo 'index.html'
 
 ---
 
@@ -313,7 +306,7 @@ echo 'INSERT-TEST-COMMAND-HERE'
 
 ## 🎗 License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project is protected under the [MIT License](https://choosealicense.com/licenses/mit/) License. For more details, refer to the [LICENSE]((https://choosealicense.com/licenses/mit/)) file.
 
 ---
 
