@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Jaguar</title>
+  <link rel="icon" type="image/png" href="../images/jaguarlogo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/luxury-theme.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="../index.html"><img src="../images/jaguarlogo.png" alt="Jaguar Logo" /></a>
+    </div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-hero">
+    <h1>Get in Touch</h1>
+    <p>Contact us for inquiries, test drives, or dealership information.</p>
+  </section>
+
+  <section class="contact-form">
+    <h2>We’d Love to Hear From You</h2>
+    <p>Whether you're looking for a test drive, have questions, or want to experience Jaguar luxury — we're here for you.</p>
+
+    <form id="jaguar-form">
+      <div class="input-wrapper">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Name" required>
+      </div>
+
+      <div class="input-wrapper">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-wrapper">
+        <i class="fas fa-phone-alt"></i>
+        <input type="tel" placeholder="Phone Number">
+      </div>
+
+      <div class="input-wrapper">
+        <i class="fas fa-car"></i>
+        <select required>
+          <option value="" disabled selected>Select a Model</option>
+          <option value="F-PACE">F-PACE</option>
+          <option value="F-TYPE">F-TYPE</option>
+          <option value="E-PACE">E-PACE</option>
+          <option value="I-PACE">I-PACE</option>
+          <option value="XJ">XJ</option>
+          <option value="XE">XE</option>
+        </select>
+      </div>
+
+      <label class="checkbox-label">
+        <input type="checkbox">
+        <span>Request a Test Drive</span>
+      </label>
+
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Thank You Modal -->
+  <div id="thankyou-modal" class="thankyou-modal">
+    <div class="thankyou-content">
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully.<br>A Jaguar specialist will contact you shortly.</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("jaguar-form");
+    const modal = document.getElementById("thankyou-modal");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = {
+        name: form.querySelector('input[type="text"]').value,
+        email: form.querySelector('input[type="email"]').value,
+        phone: form.querySelector('input[type="tel"]').value,
+        model: form.querySelector('select').value,
+        testDrive: form.querySelector('input[type="checkbox"]').checked ? "Yes" : "No",
+        message: form.querySelector('textarea').value,
+      };
+
+      fetch("http://localhost:3000/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            modal.style.display = "flex";
+            form.reset();
+          } else {
+            alert("Something went wrong: " + data.error);
+          }
+        });
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+  </script>
+
+  <footer style="background-color: #0b0b0b; padding: 3rem 1rem; text-align: center; border-top: 1px solid #333;">
+    <div class="footer-contact" style="max-width: 900px; margin: auto;">
+      <h2 style="color: #d4af37; font-size: 1.8rem; margin-bottom: 1rem;">We're Here to Assist You</h2>
+      <p style="color: #aaa; margin-bottom: 2rem;">Reach out for luxury experiences, personal consultations, or support. Jaguar is always within reach.</p>
+      <div class="contact-info" style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 1rem; color: #ccc;">
+        <div><i class="fas fa-phone-alt" style="color: #d4af37;"></i> +91 98765 43210</div>
+        <div><i class="fas fa-envelope" style="color: #d4af37;"></i> support@jaguarindia.com</div>
+        <div><i class="fas fa-map-marker-alt" style="color: #d4af37;"></i> Jaguar House, Mumbai, India</div>
+      </div>
+      <p style="margin-top: 2rem; color: #555; font-size: 0.9rem;">&copy; <script>document.write(new Date().getFullYear())</script> Jaguar. The Art of Performance.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com/jaguar"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/jaguar"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/jaguar"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/jaguar"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

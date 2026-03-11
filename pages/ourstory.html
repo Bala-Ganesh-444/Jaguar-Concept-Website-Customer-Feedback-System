@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story | Jaguar</title>
+  <link rel="icon" type="image/png" href="../images/jaguarlogo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../styles/luxury-theme.css">
+
+  <style>
+    body {
+      background-color: #0c0c0c;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .story-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.8)),
+        url('../images/ours.jpg') center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .story-hero h1 {
+      font-size: 3.5rem;
+      color: #d4af37;
+      margin-bottom: 1rem;
+    }
+
+    .story-hero p {
+      font-size: 1.3rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .story-section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .story-section h2 {
+      font-size: 2.2rem;
+      color: #d4af37;
+      margin: 3rem 0 1rem;
+    }
+
+    .story-section p {
+      font-size: 1.1rem;
+      color: #bbb;
+      line-height: 1.8;
+    }
+
+    .story-section img.story-image {
+      width: 100%;
+      max-width: 800px;
+      margin: 3rem auto;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+      animation: fadeInUp 1.2s ease;
+    }
+
+    footer {
+      background-color: #000;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+    }
+
+    .footer-content p {
+      color: #888;
+      margin-bottom: 1rem;
+    }
+
+    .social-icons a {
+      color: #888;
+      margin: 0 0.5rem;
+      font-size: 1.4rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #d4af37;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .story-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .story-hero p {
+        font-size: 1rem;
+      }
+
+      .story-section h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="../index.html"><img src="../images/jaguarlogo.png" alt="Jaguar Logo" class="navbar-logo"/></a>
+    </div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="story-hero">
+    <div>
+      <h1>Our Story</h1>
+      <p>Timeless Design. Relentless Performance. Enduring Legacy.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="story-section">
+    <h2>The Art of Automotive Craftsmanship</h2>
+    <p>Since 1935, Jaguar has embodied the perfect union of engineering precision and sculptural beauty. From the racetrack to the open road, every Jaguar is a reflection of uncompromising craftsmanship and progressive thinking.</p>
+
+    <h2>A Legacy That Roars</h2>
+    <p>Our heritage is legendary — from the iconic E-Type that redefined performance in the 60s, to today’s sleek, electric-powered I-PACE, Jaguar continues to lead the way in innovation and excellence.</p>
+
+    <h2>Innovation with Soul</h2>
+    <p>We don’t just build vehicles. We create experiences. When you drive a Jaguar, you feel something deeper — passion, presence, and the pulse of power ready to be unleashed.</p>
+
+    <img src="../images/our.jpg" alt="Jaguar on Display" class="story-image"/>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> Jaguar. Crafted for the Extraordinary.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com/jaguar"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/jaguar"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/jaguar"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/jaguar"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
