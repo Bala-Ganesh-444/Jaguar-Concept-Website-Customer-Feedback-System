@@ -1,11 +1,11 @@
 <div align="left" style="position: relative;">
 <img src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/100/external-markdown-a-lightweight-markup-language-with-plain-text-formatting-syntax-logo-duo-tal-revivo.png" align="right" width="30%" style="margin: -20px 0 0 20px;">
-<h1>JAGUAR-CONCEPT-WEBSITE-CUSTOMER-FEEDBACK-SYSTEM.GIT</h1>
+<h1>JAGUAR CONCEPT WEBSITE CUSTOMER FEEDBACK SYSTEM</h1>
 <p align="left">
 	<em><code>❯ REPLACE-ME</code></em>
 </p>
 <p align="left">
-	<img src="https://img.shields.io/github/license/Bala-Ganesh-444/Jaguar-Concept-Website-Customer-Feedback-System.git?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/license/Bala-Ganesh-444/Jaguar-Concept-Website-Customer-Feedback-System.git&style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/Bala-Ganesh-444/Jaguar-Concept-Website-Customer-Feedback-System.git?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/Bala-Ganesh-444/Jaguar-Concept-Website-Customer-Feedback-System.git?style=default&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/Bala-Ganesh-444/Jaguar-Concept-Website-Customer-Feedback-System.git?style=default&color=0080ff" alt="repo-language-count">
